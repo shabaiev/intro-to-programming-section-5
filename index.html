@@ -15,14 +15,14 @@
         less?
       </p>
       <div>
-        <input type="number" id="guess" min="1" max="99" />
-        <button id="submit">Submit Guess</button>
+        <input type="number" id="guess" min="1" max="99" onkeyup="if(this.value > 99 || this.value < 1) this.value = null;" />
+        <button type="submit" id="submit">Submit Guess</button>
       </div>
       <div>
-        <p class="message" id="number-of-guesses"></p>
-        <p class="message" id="too-high">You guessed too high. Try again.</p>
-        <p class="message" id="too-low">You guessed too low. Try again.</p>
-        <p class="message" id="max-guesses">
+        <p class="message" id="number-of-guesses" stlye="display: none"></p>
+        <p class="message" id="too-high" style="display: none">You guessed too high. Try again.</p>
+        <p class="message" id="too-low"  style="display: none" >You guessed too low. Try again.</p>
+        <p class="message" id="max-guesses"  style="display: none">
           You reached the max number of guesses
         </p>
         <p class="message" id="correct">
